@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_background_welcome"
+    tools:context="com.practice.jackchung.lexiangmusicplayer.activity.MusicPlayActivity">
+
+
+    <include
+        android:id="@+id/actionBar_MusicPlayActivity_TitleBar"
+        layout="@layout/inflation_mytitlebar_layout">
+    </include>
+
+    <RelativeLayout
+        android:id="@+id/relativityLayout_MusicPlayActivity_MainContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/actionBar_MusicPlayActivity_TitleBar">
+
+        <RelativeLayout
+            android:id="@+id/relativityLayout_MusicPlayActivity_ImageArea"
+            android:layout_width="match_parent"
+            android:layout_height="320dp">
+
+            <FrameLayout
+                android:id="@+id/framelayout_MusicPlayActivity_ImageArea"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/imageView_MusicPlayActivity_PlayPin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/pin"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="8dp"/>
+
+                <ImageView
+                    android:id="@+id/imageView_MusicPlayActivity_PlayDisk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/disc"
+                    android:layout_gravity="center" />
+
+            </FrameLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout_MusicPlayActivity_TextAndButtonArea"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal"
+            android:paddingStart="32dp"
+            android:paddingEnd="32dp"
+            android:layout_below="@+id/relativityLayout_MusicPlayActivity_ImageArea">
+
+            <ImageButton
+                android:id="@+id/imageButton_MusicPlayActivity_Favorite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/favorite_unselected"
+                android:layout_gravity="center_horizontal|top"/>
+
+            <TextView
+                android:id="@+id/textView_MusicPlayActivity_MusicLyric"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="无歌词"
+                android:textSize="20sp"
+                android:textColor="#ffffff"
+                android:gravity="center_horizontal|top"
+                android:layout_gravity="center" />
+
+            <ImageButton
+                android:id="@+id/imageButton_MusicPlayActivity_Download"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/download"
+                android:layout_gravity="center_horizontal|top"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout_MusicPlayActivity_PlayProgressArea"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:layout_below="@+id/linearLayout_MusicPlayActivity_TextAndButtonArea">
+
+            <TextView
+                android:id="@+id/textView_MusicPlayActivity_PlayTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00:00"
+                android:textColor="#ffffff"
+                android:textSize="20sp"/>
+
+            <SeekBar
+                android:id="@+id/seekBar_MusicPlayActivity_PlayProgress"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+
+
+            <TextView
+                android:id="@+id/textView_MusicPlayActivity_TotalTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="05:23"
+                android:textColor="#ffffff"
+                android:textSize="20sp"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/LinearLayout_MusicPlayActivity_PlayControlArea"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            android:paddingStart="64dp"
+            android:paddingEnd="64dp"
+            android:layout_below="@+id/linearLayout_MusicPlayActivity_PlayProgressArea">
+
+            <ImageButton
+                android:id="@+id/imageButton_MusicPlayActivity_LastMusic"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/ic_lastmusic"
+                android:scaleType="fitXY"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"/>
+
+            <ImageButton
+                android:id="@+id/imageButton_MusicPlayActivity_PausePlayMusic"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/ic_pausemusic"
+                android:scaleType="fitXY"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"/>
+
+            <ImageButton
+                android:id="@+id/imageButton_MusicPlayActivity_NextMusic"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/ic_nextmusic"
+                android:scaleType="fitXY"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

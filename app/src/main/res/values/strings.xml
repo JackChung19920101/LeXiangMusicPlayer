@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">LeXiangMusicPlayer</string>
+    <string name="drawer_open">open</string>
+    <string name="drawer_close">close</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="localMusicList">localMusicList fragment</string>
+    <string name="netMusicList">netMusicList fragment</string>
+</resources>
